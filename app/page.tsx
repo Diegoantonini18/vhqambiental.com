@@ -1,4 +1,3 @@
-import { headers } from "next/headers" // Importa headers para obtener el Accept-Language
 import LocaleProvider from "@/components/locale-provider"
 import Header from "@/components/header"
 import HeroCarousel from "@/components/hero-carousel"
@@ -16,10 +15,8 @@ interface HomePageProps {
 }
 
 export default async function HomePage({ searchParams }: HomePageProps) {
-  // Determina el locale inicial basado en el encabezado Accept-Language del navegador
-  const acceptLanguage = headers().get("Accept-Language")
-  const browserLocale = acceptLanguage?.split(",")[0].split("-")[0] || "en"
-  const initialLocale = browserLocale === "es" ? "es" : "en" // Default a 'en' si no es 'es'
+  // Determina el locale inicial basado en el parámetro de búsqueda locale
+  const initialLocale = "en" // Siempre renderiza estáticamente con 'en' por defecto
 
   return (
     <LocaleProvider initialLocale={initialLocale}>

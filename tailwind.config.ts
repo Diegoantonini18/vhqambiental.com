@@ -20,7 +20,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        questrial: ["var(--font-questrial)"], // Añadir la nueva fuente
+        inter: ["var(--font-inter)"], // Cambiar a Inter
       },
       colors: {
         border: "hsl(var(--border))",

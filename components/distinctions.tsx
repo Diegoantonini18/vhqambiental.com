@@ -15,7 +15,7 @@ export default function Distinctions({ messages }: DistinctionsProps) {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{messages.distinctions.title}</h2>
+            <h2 className="text-3xl font-bold sm:text-5xl tracking-normal">{messages.distinctions.title}</h2>
             <div className="h-1 w-20 bg-primary mx-auto" />
           </div>
         </div>

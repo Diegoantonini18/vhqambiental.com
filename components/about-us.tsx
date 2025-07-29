@@ -42,7 +42,7 @@ export default function AboutUs({ messages }: AboutUsProps) {
         {/* Título principal de la sección */}
         <div className="flex flex-col justify-center space-y-4 text-center mb-12 items-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{messages.aboutUs.title}</h2>
+            <h2 className="text-3xl font-bold sm:text-5xl tracking-normal">{messages.aboutUs.title}</h2>
             <div className="h-1 w-20 bg-primary mx-auto" />
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function AboutUs({ messages }: AboutUsProps) {
         {/* Título de la sección de Equipo */}
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{messages.aboutUs.teamSection.title}</h2>
+            <h2 className="text-3xl font-bold sm:text-5xl tracking-normal">{messages.aboutUs.teamSection.title}</h2>
             <div className="h-1 w-20 bg-primary mx-auto" />
           </div>
         </div>

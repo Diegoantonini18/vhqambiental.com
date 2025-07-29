@@ -33,7 +33,7 @@ export default function Services({ messages }: ServicesProps) {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{messages.services.title}</h2>
+            <h2 className="text-3xl font-bold sm:text-5xl tracking-normal">{messages.services.title}</h2>
             <div className="h-1 w-20 bg-primary mx-auto" />
             <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
               {messages.services.description}

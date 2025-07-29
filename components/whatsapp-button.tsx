@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { PhoneIcon as Whatsapp } from "lucide-react" // Importa el icono de WhatsApp
+import Image from "next/image" // Importar Image para usar el SVG
 
 interface WhatsAppButtonProps {
   phoneNumber: string // Número de teléfono con código de país, sin '+' ni espacios
@@ -22,9 +22,15 @@ export default function WhatsAppButton({ phoneNumber, message }: WhatsAppButtonP
     >
       <Button
         size="icon"
-        className="h-16 w-16 rounded-full bg-[#25D366] hover:bg-[#1DA851] text-white shadow-lg transition-transform duration-200 ease-in-out hover:scale-110"
+        className="h-20 w-20 rounded-full bg-primary hover:bg-[#1DA851] text-white shadow-lg transition-transform duration-200 ease-in-out hover:scale-110"
       >
-        <Whatsapp className="h-8 w-8" />
+        <Image
+          src="/images/whatsapp-icon.svg" // Usar la ruta del SVG
+          alt="WhatsApp Icon"
+          width={40} // Ajustar el tamaño del SVG dentro del botón
+          height={40}
+          className="h-10 w-10" // Clases de Tailwind para el tamaño final
+        />
       </Button>
     </Link>
   )

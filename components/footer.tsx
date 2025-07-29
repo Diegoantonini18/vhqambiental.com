@@ -1,75 +1,47 @@
-"use client" // Asegúrate de que este componente sea un Client Component si usa Image de next/image
+"use client"
 
 import Link from "next/link"
-import Image from "next/image" // Importar el componente Image
+import Image from "next/image"
+import { useLocale } from "@/components/locale-provider" // Importa el hook useLocale
 
-interface FooterProps {
-  messages: {
-    header: {
-      logo: {
-        line1: string
-        line2: string
-        line3: string
-      }
-    }
-    footer: {
-      description: string
-      quickLinksTitle: string
-      quickLinks: {
-        home: string
-        services: string
-        aboutUs: string
-        contact: string
-      }
-      servicesTitle: string
-      services: {
-        environmentalConsulting: string
-        environmentalLitigation: string
-        regulatoryCompliance: string
-        sustainableDevelopment: string
-      }
-      contactTitle: string
-      address: string
-      phone: string
-      email: string
-      copyright: string
-      privacyPolicy: string
-      termsOfUse: string
-    }
-  }
-  locale: string
-}
+export default function Footer() {
+  const { locale, messages } = useLocale() // Usa el hook para obtener el locale y los mensajes
 
-export default function Footer({ messages, locale }: FooterProps) {
+  if (!messages) return null // Muestra un estado de carga o null si los mensajes aún no están disponibles
+
   return (
     <footer className="w-full bg-gray-900 text-gray-300 py-12 md:py-16">
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-gray-700">
           <div className="space-y-4">
-            <Link href={`/?locale=${locale}`} className="flex items-center gap-2" prefetch={false}>
-              <Image
-                src="/images/vhq-logo.png" // Usar la misma ruta del logo del header
-                alt="VHQ Derecho Ambiental Logo"
-                width={160} // Ajustar el tamaño según sea necesario para el footer
-                height={40}
-                priority // Considerar si es necesario 'priority' en el footer
-              />
+            <Link href="/" className="flex items-center gap-2" prefetch={false}>
+              {" "}
+              {/* Eliminado ?locale=${locale} */}
+              <Image src="/images/vhq-logo.png" alt="VHQ Derecho Ambiental Logo" width={160} height={40} priority />
             </Link>
             <p className="text-sm leading-relaxed">{messages.footer.description}</p>
           </div>
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">{messages.footer.quickLinksTitle}</h3>
             <nav className="space-y-2 text-sm">
-              <Link href={`/?locale=${locale}`} className="block hover:text-white" prefetch={false}>
+              <Link href="/" className="block hover:text-white" prefetch={false}>
+                {" "}
+                {/* Eliminado ?locale=${locale} */}
                 {messages.footer.quickLinks.home}
               </Link>
-              <Link href={`/?locale=${locale}`} className="block hover:text-white" prefetch={false}>
+              <Link href="/#services" className="block hover:text-white" prefetch={false}>
+                {" "}
+                {/* Eliminado ?locale=${locale} */}
                 {messages.footer.quickLinks.services}
               </Link>
-              <Link href={`/?locale=${locale}`} className="block hover:text-white" prefetch={false}>
+              <Link href="/#about-us" className="block hover:text-white" prefetch={false}>
+                {" "}
+                {/* Eliminado ?locale=${locale} */}
                 {messages.footer.quickLinks.aboutUs}
               </Link>
-              <Link href={`/?locale=${locale}`} className="block hover:text-white" prefetch={false}>
+              <Link href="/#contact" className="block hover:text-white" prefetch={false}>
+                {" "}
+                {/* Eliminado ?locale=${locale} */}
                 {messages.footer.quickLinks.contact}
               </Link>
             </nav>
@@ -77,16 +49,24 @@ export default function Footer({ messages, locale }: FooterProps) {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">{messages.footer.servicesTitle}</h3>
             <nav className="space-y-2 text-sm">
-              <Link href={`/?locale=${locale}`} className="block hover:text-white" prefetch={false}>
+              <Link href="/#services" className="block hover:text-white" prefetch={false}>
+                {" "}
+                {/* Eliminado ?locale=${locale} */}
                 {messages.footer.services.environmentalConsulting}
               </Link>
-              <Link href={`/?locale=${locale}`} className="block hover:text-white" prefetch={false}>
+              <Link href="/#services" className="block hover:text-white" prefetch={false}>
+                {" "}
+                {/* Eliminado ?locale=${locale} */}
                 {messages.footer.services.environmentalLitigation}
               </Link>
-              <Link href={`/?locale=${locale}`} className="block hover:text-white" prefetch={false}>
+              <Link href="/#services" className="block hover:text-white" prefetch={false}>
+                {" "}
+                {/* Eliminado ?locale=${locale} */}
                 {messages.footer.services.regulatoryCompliance}
               </Link>
-              <Link href={`/?locale=${locale}`} className="block hover:text-white" prefetch={false}>
+              <Link href="/#services" className="block hover:text-white" prefetch={false}>
+                {" "}
+                {/* Eliminado ?locale=${locale} */}
                 {messages.footer.services.sustainableDevelopment}
               </Link>
             </nav>
@@ -103,10 +83,14 @@ export default function Footer({ messages, locale }: FooterProps) {
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 text-sm">
           <p className="mb-4 md:mb-0">{messages.footer.copyright}</p>
           <nav className="flex gap-4">
-            <Link href={`/?locale=${locale}`} className="hover:text-white" prefetch={false}>
+            <Link href="/privacy-policy" className="hover:text-white" prefetch={false}>
+              {" "}
+              {/* Asumiendo rutas estáticas */}
               {messages.footer.privacyPolicy}
             </Link>
-            <Link href={`/?locale=${locale}`} className="hover:text-white" prefetch={false}>
+            <Link href="/terms-of-use" className="hover:text-white" prefetch={false}>
+              {" "}
+              {/* Asumiendo rutas estáticas */}
               {messages.footer.termsOfUse}
             </Link>
           </nav>

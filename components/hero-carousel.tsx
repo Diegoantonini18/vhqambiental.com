@@ -4,30 +4,19 @@ import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useLocale } from "@/components/locale-provider" // Importa el hook useLocale
 
-interface HeroCarouselProps {
-  messages: {
-    hero: {
-      slides: {
-        title: string
-        subtitle: string
-        image: string
-      }[]
-    }
-  }
-}
-
-export default function HeroCarousel({ messages }: HeroCarouselProps) {
+export default function HeroCarousel() {
+  const { messages } = useLocale() // Usa el hook para obtener los mensajes
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
   const [isTransitionEnabled, setIsTransitionEnabled] = useState(true)
-
-  const originalSlides = messages.hero.slides
-  // Duplicamos la primera diapositiva al final para crear el efecto de bucle continuo
-  const slides = [...originalSlides, originalSlides[0]]
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
   const slideDisplayDuration = 5000 // 5 segundos mostrando cada slide
   const transitionDuration = 1500 // 1.5 segundos para la animación de deslizamiento (más suave)
+
+  const originalSlides = messages?.hero?.slides || []
+  const slides = [...originalSlides, originalSlides[0]]
 
   // Lógica para el avance automático del carrusel
   useEffect(() => {
@@ -100,6 +89,8 @@ export default function HeroCarousel({ messages }: HeroCarouselProps) {
     setIsTransitionEnabled(true) // Asegurar que la transición esté habilitada para el salto
   }
 
+  if (!messages) return null // Muestra un estado de carga o null si los mensajes aún no están disponibles
+
   return (
     <section className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
       {/* Este div actúa como la pista del carrusel, conteniendo todos los slides */}
@@ -124,9 +115,15 @@ export default function HeroCarousel({ messages }: HeroCarouselProps) {
 
             {/* Superposición con el texto del slide */}
             <div className="absolute inset-0 z-10 flex items-center justify-center p-4">
-              <div className="bg-black/50 text-white p-8 md:p-12 rounded-lg max-w-4xl text-center">
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">{slide.title}</h1>
-                <p className="text-lg md:text-xl lg:text-2xl">{slide.subtitle}</p>
+              <div className="flex items-stretch bg-black/55 rounded-lg max-w-4xl">
+                <div className="p-8 md:p-12 text-white text-center flex-grow">
+                  <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">{slide.title}</h1>
+                  <p className="text-lg md:text-xl lg:text-2xl">{slide.subtitle}</p>
+                </div>
+                <div className="flex flex-col w-3 overflow-hidden rounded-r-lg">
+                  <div className="bg-primary flex-grow" />
+                  <div className="bg-tertiary flex-grow" />
+                </div>
               </div>
             </div>
           </div>

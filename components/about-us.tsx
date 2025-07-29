@@ -1,41 +1,23 @@
+"use client"
+
 import Image from "next/image"
 import { Card } from "@/components/ui/card"
-import { Lightbulb, Target, Handshake } from "lucide-react" // Iconos para Misión, Visión, Valores
+import { Lightbulb, Target, Handshake, Briefcase, Star, Gavel, ShieldCheck } from "lucide-react" // Importa los nuevos iconos
+import { useLocale } from "@/components/locale-provider" // Importa el hook useLocale
 
-interface AboutUsProps {
-  messages: {
-    aboutUs: {
-      title: string
-      leadersSection: {
-        title: string
-        paragraph1: string
-        paragraph2: string
-        paragraph3: string
-        achievements: string[]
-      }
-      missionVisionValues: {
-        missionTitle: string
-        missionDescription: string
-        visionTitle: string
-        visionDescription: string
-        valuesTitle: string
-        valuesList: string[]
-      }
-      teamSection: {
-        title: string
-        members: {
-          image: string
-          name: string
-          title: string
-          specialty: string
-          description: string
-        }[]
-      }
-    }
+export default function AboutUs() {
+  const { messages } = useLocale() // Usa el hook para obtener los mensajes
+
+  if (!messages) return null // Muestra un estado de carga o null si los mensajes aún no están disponibles
+
+  // Mapeo de nombres de iconos a componentes de Lucide React
+  const AchievementIconMap = {
+    Briefcase: Briefcase,
+    Star: Star,
+    Gavel: Gavel,
+    ShieldCheck: ShieldCheck,
   }
-}
 
-export default function AboutUs({ messages }: AboutUsProps) {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
       <div className="container px-4 md:px-6">
@@ -50,22 +32,36 @@ export default function AboutUs({ messages }: AboutUsProps) {
         {/* Sección de Líderes con Imagen */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-primary">{messages.aboutUs.leadersSection.title}</h3>
+            <h3 className="text-primary leading-10 text-4xl font-bold">{messages.aboutUs.leadersSection.title}</h3>
             <p className="text-gray-700 leading-relaxed">{messages.aboutUs.leadersSection.paragraph1}</p>
             <p className="text-gray-700 leading-relaxed">{messages.aboutUs.leadersSection.paragraph2}</p>
             <p className="text-gray-700 leading-relaxed">{messages.aboutUs.leadersSection.paragraph3}</p>
             <div className="flex flex-wrap gap-3 mt-6">
-              {messages.aboutUs.leadersSection.achievements.map((achievement, index) => (
-                <span key={index} className="bg-primary text-white text-sm px-4 py-2 rounded-full font-medium">
-                  {achievement}
-                </span>
-              ))}
+              {messages.aboutUs.leadersSection.achievements.map((achievement, index) => {
+                const IconComponent = AchievementIconMap[achievement.icon as keyof typeof AchievementIconMap]
+                return (
+                  <span
+                    key={index}
+                    className={`flex items-center gap-2 text-sm px-4 py-2 rounded-full font-medium ${
+                      index === 0
+                        ? "bg-primary text-white"
+                        : index === 1
+                          ? "bg-secondary text-gray-800" // Segundo botón con color secundario y texto gris
+                          : index === 2
+                            ? "bg-tertiary text-white"
+                            : "bg-quaternary text-gray-800"
+                    }`}
+                  >
+                    {IconComponent && <IconComponent className="h-4 w-4" />} {achievement.text}
+                  </span>
+                )
+              })}
             </div>
           </div>
           <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-xl">
             <Image
               src="/images/1-solidez-1.jpeg"
-              alt="Equipo de Aristarain & Asociados trabajando en un entorno profesional"
+              alt="Equipo de VHQ trabajando en un entorno profesional"
               layout="fill"
               objectFit="cover"
               className="transition-transform duration-500 hover:scale-105"

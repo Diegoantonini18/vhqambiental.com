@@ -1,53 +1,18 @@
+"use client"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
+import { useLocale } from "@/components/locale-provider" // Importa el hook useLocale
 
-interface ContactProps {
-  messages: {
-    contact: {
-      title: string
-      description: string
-      infoTitle: string
-      email: {
-        label: string
-        address1: string
-        address2: string
-      }
-      phone: {
-        label: string
-        number1: string
-        number2: string
-      }
-      address: {
-        label: string
-        street: string
-        city: string
-      }
-      hours: {
-        label: string
-        weekday: string
-        saturday: string
-      }
-      formTitle: string
-      fullNameLabel: string
-      fullNamePlaceholder: string
-      emailLabel: string
-      emailPlaceholder: string
-      companyLabel: string
-      companyPlaceholder: string
-      subjectLabel: string
-      subjectPlaceholder: string
-      messageLabel: string
-      messagePlaceholder: string
-      submitButton: string
-    }
-  }
-}
+export default function Contact() {
+  const { messages } = useLocale() // Usa el hook para obtener los mensajes
 
-export default function Contact({ messages }: ContactProps) {
+  if (!messages) return null // Muestra un estado de carga o null si los mensajes aún no están disponibles
+
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
       <div className="container px-4 md:px-6">
@@ -73,7 +38,9 @@ export default function Contact({ messages }: ContactProps) {
                 <div>
                   <h4 className="font-semibold text-lg">{messages.contact.email.label}</h4>
                   <p className="text-gray-600">{messages.contact.email.address1}</p>
-                  <p className="text-gray-600">{messages.contact.email.address2}</p>
+                  {messages.contact.email.address2 && (
+                    <p className="text-gray-600">{messages.contact.email.address2}</p>
+                  )}
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -83,7 +50,7 @@ export default function Contact({ messages }: ContactProps) {
                 <div>
                   <h4 className="font-semibold text-lg">{messages.contact.phone.label}</h4>
                   <p className="text-gray-600">{messages.contact.phone.number1}</p>
-                  <p className="text-gray-600">{messages.contact.phone.number2}</p>
+                  {messages.contact.phone.number2 && <p className="text-gray-600">{messages.contact.phone.number2}</p>}
                 </div>
               </div>
               <div className="flex items-start gap-4">

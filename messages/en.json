@@ -1,6 +1,10 @@
 {
   "header": {
-    
+    "logo": {
+      "line1": "ARISTARAIN",
+      "line2": "& ASSOCIATES",
+      "line3": "ENVIRONMENTAL LAW"
+    },
     "nav": {
       "aboutUs": "ABOUT US",
       "services": "SERVICES",
@@ -86,7 +90,12 @@
       "paragraph1": "VHQ is a boutique law firm specialized exclusively in environmental law, with more than 15 years of experience in the market. Since our foundation, we have positioned ourselves as references in environmental legal advice, combining deep technical knowledge with practical experience in all sectors of the economy.",
       "paragraph2": "Our comprehensive approach covers the prevention and management of environmental risks up to the resolution of complex conflicts. We work with multinational companies, medium-sized companies, innovative startups, and public sector organizations, providing legal solutions that balance business growth with environmental responsibility.",
       "paragraph3": "We are proud of our commitment to excellence, innovation, and sustainability. Each case is an opportunity to contribute to a greener and more responsible future.",
-      "achievements": ["15+ years experience", "500+ successful cases", "ISO 14001 Certification"]
+      "achievements": [
+        { "text": "15+ years experience", "icon": "Briefcase" },
+        { "text": "Client Satisfaction", "icon": "Star" },
+        { "text": "500+ successful cases", "icon": "Gavel" },
+        { "text": "ISO 14001 Certification", "icon": "ShieldCheck" }
+      ]
     },
     "missionVisionValues": {
       "missionTitle": "Our Mission",

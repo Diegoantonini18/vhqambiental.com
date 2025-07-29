@@ -1,11 +1,16 @@
 {
   "header": {
+    "logo": {
+      "line1": "ARISTARAIN",
+      "line2": "& ASOCIADOS",
+      "line3": "DERECHO AMBIENTAL"
+    },
     "nav": {
       "aboutUs": "NOSOTROS",
       "services": "SERVICIOS",
       "legalMatrix": "MATRIZ LEGAL"
     },
-    "contactButton": "CONTÁCTANOS",
+    "contactButton": "CONTACTO",
     "languageSwitcher": "Español"
   },
   "hero": {
@@ -90,7 +95,12 @@
       "paragraph1": "VHQ es un estudio jurídico boutique especializado exclusivamente en derecho ambiental, con más de 15 años de trayectoria en el mercado. Desde nuestra fundación, nos hemos posicionado como referentes en asesoramiento legal ambiental, combinando conocimiento técnico profundo con experiencia práctica en todos los sectores de la economía.",
       "paragraph2": "Nuestro enfoque integral abarca desde la prevención y gestión de riesgos ambientales hasta la resolución de conflictos complejos. Trabajamos con empresas multinacionales, medianas empresas, startups innovadoras y organizaciones del sector público, brindando soluciones jurídicas estratégicas que equilibran el crecimiento empresarial con la responsabilidad ambiental.",
       "paragraph3": "Nos enorgullecemos de nuestro compromiso con la excelencia, la innovación y la sostenibilidad. Cada caso es una oportunidad para contribuir a un futuro más verde y responsable.",
-      "achievements": ["15 años experiencia", "500 casos exitosos", "Certificación ISO 14001"]
+      "achievements": [
+        { "text": "15 años experiencia", "icon": "Briefcase" },
+        { "text": "Satisfacción del Cliente", "icon": "Star" },
+        { "text": "500 casos exitosos", "icon": "Gavel" },
+        { "text": "Certificación ISO 14001", "icon": "ShieldCheck" }
+      ]
     },
     "missionVisionValues": {
       "missionTitle": "Nuestra Misión",

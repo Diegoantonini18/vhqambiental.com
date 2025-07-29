@@ -1,15 +1,15 @@
+"use client"
+
 import Image from "next/image"
+import { useLocale } from "@/components/locale-provider" // Importa el hook useLocale
 
-interface DistinctionsProps {
-  messages: {
-    distinctions: {
-      title: string
-      logos: string[]
-    }
-  }
-}
+type DistinctionsProps = {}
 
-export default function Distinctions({ messages }: DistinctionsProps) {
+export default function Distinctions({}: DistinctionsProps) {
+  const { messages } = useLocale() // Usa el hook para obtener los mensajes
+
+  if (!messages) return null // Muestra un estado de carga o null si los mensajes aún no están disponibles
+
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
       <div className="container px-4 md:px-6">
@@ -21,7 +21,7 @@ export default function Distinctions({ messages }: DistinctionsProps) {
         </div>
         <div className="flex flex-col items-center justify-center leading-10">
           {/* Fila superior: Imágenes 2, 3, 4 */}
-          <div className="grid grid-cols-3 gap-4 md:gap-8 items-center justify-center w-full mb-8 ml-10 mr-0 py-[] px-[4rem]">
+          <div className="grid grid-cols-3 gap-4 md:gap-8 items-center justify-center w-full mb-20 ml-10 mr-0 py-[] px-[4rem]">
             {messages.distinctions.logos.slice(1, 4).map((logo, index) => (
               <div
                 key={`top-${index}`}

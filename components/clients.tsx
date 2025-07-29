@@ -1,15 +1,13 @@
+"use client"
+
 import Image from "next/image"
+import { useLocale } from "@/components/locale-provider" // Importa el hook useLocale
 
-interface ClientsProps {
-  messages: {
-    clients: {
-      title: string
-      logos: string[]
-    }
-  }
-}
+export default function Clients() {
+  const { messages } = useLocale() // Usa el hook para obtener los mensajes
 
-export default function Clients({ messages }: ClientsProps) {
+  if (!messages) return null // Muestra un estado de carga o null si los mensajes aún no están disponibles
+
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
       <div className="container px-4 md:px-6">

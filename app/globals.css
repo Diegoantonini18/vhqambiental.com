@@ -17,7 +17,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
     --primary: #3f8c7f;
-    --secondary: #b0d9d5;
+    --secondary: #C1ECEB;
     --tertiary: #c7922b;
     --quaternary: #f8e7b1;
     --service-teal: #00b0b9;
@@ -25,7 +25,6 @@
     --service-maroon: #8a003f;
     --service-blue: #00568a;
     --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;

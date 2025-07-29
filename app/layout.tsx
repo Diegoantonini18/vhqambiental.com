@@ -5,7 +5,7 @@ import localFont from "next/font/local" // Importar localFont
 import WhatsAppButton from "@/components/whatsapp-button" // Importar el componente WhatsAppButton
 
 const questrial = localFont({
-  src: "../public/fonts/Questrial-Regular.ttf", // Ruta a tu archivo de fuente
+  src: "/fonts/Questrial-Regular.ttf", // Ruta a tu archivo de fuente
   variable: "--font-questrial",
   display: "swap", // Asegura que la fuente se muestre rápidamente
 })

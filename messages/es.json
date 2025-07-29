@@ -1,0 +1,218 @@
+{
+  "header": {
+    "nav": {
+      "aboutUs": "NOSOTROS",
+      "services": "SERVICIOS",
+      "legalMatrix": "MATRIZ LEGAL"
+    },
+    "contactButton": "CONTÁCTANOS",
+    "languageSwitcher": "Español"
+  },
+  "hero": {
+    "slides": [
+      {
+        "title": "Asesoría Legal Especializada",
+        "subtitle": "Más de 15 años de experiencia en regulaciones ambientales",
+        "image": "/images/3-creatividad-1.jpeg"
+      },
+      {
+        "title": "Expertos en Derecho Ambiental",
+        "subtitle": "Soluciones integrales para su negocio",
+        "image": "/images/1-solidez-1.jpeg"
+      },
+      {
+        "title": "Soluciones Legales Sostenibles",
+        "subtitle": "Guiándole a través de complejos desafíos ambientales",
+        "image": "/images/2-perspectiva-2.jpeg"
+      }
+    ]
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "description": "Ofrecemos soluciones integrales en derecho ambiental para empresas y organizaciones comprometidas con la sostenibilidad. Nuestro enfoque multidisciplinario combina expertise legal con conocimiento técnico para brindar asesoramiento de excelencia.",
+    "cards": [
+      {
+        "icon": "Leaf",
+        "color": "bg-primary",
+        "title": "Consultoría Ambiental",
+        "description": "Asesoramiento integral en evaluaciones de impacto ambiental, estudios de factibilidad, gestión de recursos naturales y planificación territorial. Desarrollo de sistemas de gestión ambiental ISO 14001.",
+        "subServices": [
+          "Evaluaciones de Impacto Ambiental",
+          "Auditorías Ambientales",
+          "Planes de Manejo",
+          "Certificaciones Ambientales"
+        ],
+        "backgroundImage": "/images/1-solidez-1.jpeg"
+      },
+      {
+        "icon": "Scale",
+        "color": "bg-service-teal",
+        "title": "Litigios Ambientales",
+        "description": "Representación legal especializada en casos de daño ambiental, conflictos regulatorios, recursos administrativos y defensa ante autoridades ambientales.",
+        "subServices": ["Defensa Legal", "Recursos Administrativos", "Mediación Ambiental", "Reparación de Daños"],
+        "backgroundImage": "/images/2-perspectiva-2.jpeg"
+      },
+      {
+        "icon": "FileText",
+        "color": "bg-service-purple",
+        "title": "Compliance Regulatorio",
+        "description": "Cumplimiento normativo integral, desarrollo de políticas ambientales corporativas, capacitación y seguimiento de obligaciones legales ambientales.",
+        "subServices": ["Análisis Normativo", "Políticas Corporativas", "Capacitación Legal", "Monitoreo Regulatorio"],
+        "backgroundImage": "/images/3-creatividad-1.jpeg"
+      },
+      {
+        "icon": "Users",
+        "color": "bg-service-maroon",
+        "title": "Responsabilidad Social",
+        "description": "Implementación de programas de responsabilidad social empresarial, sostenibilidad corporativa y desarrollo de triple impacto.",
+        "subServices": ["Programas RSE", "Reportes de Sostenibilidad", "Stakeholder Engagement", "Impacto Social"],
+        "backgroundImage": "/images/1-solidez-1.jpeg"
+      },
+      {
+        "icon": "Building",
+        "color": "bg-service-blue",
+        "title": "Desarrollo Sostenible",
+        "description": "Planificación estratégica para proyectos de desarrollo urbano y rural sostenible, energías renovables y economía circular.",
+        "subServices": [
+          "Proyectos Sostenibles",
+          "Energías Renovables",
+          "Economía Circular",
+          "Planificación Territorial"
+        ],
+        "backgroundImage": "/images/2-perspectiva-2.jpeg"
+      }
+    ]
+  },
+  "aboutUs": {
+    "title": "Quiénes Somos",
+    "leadersSection": {
+      "title": "Líderes en Derecho Ambiental",
+      "paragraph1": "VHQ es un estudio jurídico boutique especializado exclusivamente en derecho ambiental, con más de 15 años de trayectoria en el mercado. Desde nuestra fundación, nos hemos posicionado como referentes en asesoramiento legal ambiental, combinando conocimiento técnico profundo con experiencia práctica en todos los sectores de la economía.",
+      "paragraph2": "Nuestro enfoque integral abarca desde la prevención y gestión de riesgos ambientales hasta la resolución de conflictos complejos. Trabajamos con empresas multinacionales, medianas empresas, startups innovadoras y organizaciones del sector público, brindando soluciones jurídicas estratégicas que equilibran el crecimiento empresarial con la responsabilidad ambiental.",
+      "paragraph3": "Nos enorgullecemos de nuestro compromiso con la excelencia, la innovación y la sostenibilidad. Cada caso es una oportunidad para contribuir a un futuro más verde y responsable.",
+      "achievements": ["15 años experiencia", "500 casos exitosos", "Certificación ISO 14001"]
+    },
+    "missionVisionValues": {
+      "missionTitle": "Nuestra Misión",
+      "missionDescription": "Proteger el medio ambiente a través de asesoramiento jurídico especializado, promoviendo el desarrollo sostenible y la responsabilidad empresarial.",
+      "visionTitle": "Nuestra Visión",
+      "visionDescription": "Ser el referente en derecho ambiental, liderando la transformación hacia un futuro más sostenible y responsable.",
+      "valuesTitle": "Nuestros Valores",
+      "valuesList": [
+        "Compromiso con la sostenibilidad",
+        "Excelencia profesional",
+        "Transparencia y ética",
+        "Innovación constante"
+      ]
+    },
+    "teamSection": {
+      "title": "Nuestro Equipo",
+      "members": [
+        {
+          "image": "/placeholder.svg?height=150&width=150",
+          "name": "Dra. María Elena Vásquez",
+          "title": "Socia Fundadora",
+          "specialty": "Derecho Ambiental Corporativo",
+          "description": "Especialista en regulaciones ambientales con más de 20 años de experiencia. Experta en compliance ambiental y sostenibilidad empresarial."
+        },
+        {
+          "image": "/placeholder.svg?height=150&width=150",
+          "name": "Dr. Carlos Mendoza",
+          "title": "Socio Senior",
+          "specialty": "Litigios Ambientales",
+          "description": "Litigante experimentado en casos de responsabilidad ambiental y disputas corporativas. Máster en Derecho Ambiental Internacional."
+        },
+        {
+          "image": "/placeholder.svg?height=150&width=150",
+          "name": "Dr. Andrés Herrera",
+          "title": "Asociado Senior",
+          "specialty": "Energías Renovables",
+          "description": "Experto en marcos regulatorios para energías limpias y proyectos sostenibles. Especialista en transición energética."
+        }
+      ]
+    }
+  },
+  "distinctions": {
+    "title": "Nuestras Distinciones",
+    "logos": [
+      "/images/chambers-and-partners.png",
+      "/images/legal500-next-generation-partner-2025.png",
+      "/images/legal500-top-tier-firm-2025.png",
+      "/images/legal500-leading-partner-2025.png",
+      "/images/whos-who-legal.png"
+    ]
+  },
+  "clients": {
+    "title": "Nuestros Clientes",
+    "logos": [
+      "/placeholder.svg?height=80&width=160",
+      "/placeholder.svg?height=80&width=160",
+      "/placeholder.svg?height=80&width=160",
+      "/placeholder.svg?height=80&width=160",
+      "/placeholder.svg?height=80&width=160",
+      "/placeholder.svg?height=80&width=160",
+      "/placeholder.svg?height=80&width=160",
+      "/placeholder.svg?height=80&width=160"
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Estamos comprometidos en brindarle el mejor asesoramiento legal ambiental. Nuestro equipo de expertos está disponible para consultas estratégicas, emergencias ambientales y proyectos de largo plazo. Cada consulta es tratada con la máxima confidencialidad y profesionalismo.",
+    "infoTitle": "Información de Contacto",
+    "email": {
+      "label": "Email",
+      "address1": "contacto@vhqambiental.com"
+    },
+    "phone": {
+      "label": "Teléfono",
+      "number1": "+54 11 4567-8900",
+      "number2": "+54 11 4567-8901"
+    },
+    "address": {
+      "label": "Dirección",
+      "street": "Av. Corrientes 1234, Piso 10",
+      "city": "Buenos Aires, Argentina"
+    },
+    "hours": {
+      "label": "Horarios",
+      "weekday": "Lun - Vie: 9:00 - 18:00",
+      "saturday": "Sáb: 9:00 - 13:00"
+    },
+    "formTitle": "Envíanos un Mensaje",
+    "fullNameLabel": "Nombre completo *",
+    "fullNamePlaceholder": "Tu nombre",
+    "emailLabel": "Email *",
+    "emailPlaceholder": "tu@email.com",
+    "companyLabel": "Empresa",
+    "companyPlaceholder": "Nombre de tu empresa",
+    "subjectLabel": "Asunto *",
+    "subjectPlaceholder": "Motivo de consulta",
+    "messageLabel": "Mensaje *",
+    "messagePlaceholder": "Describe tu consulta o proyecto...",
+    "submitButton": "Enviar Mensaje"
+  },
+  "footer": {
+    "description": "Expertos en derecho ambiental comprometidos con la sostenibilidad y el desarrollo responsable.",
+    "quickLinksTitle": "Enlaces Rápidos",
+    "quickLinks": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "aboutUs": "Nosotros",
+      "contact": "Contacto"
+    },
+    "servicesTitle": "Servicios",
+    "services": {
+      "environmentalConsulting": "Consultoría Ambiental",
+      "environmentalLitigation": "Litigios Ambientales",
+      "regulatoryCompliance": "Compliance Regulatorio",
+      "sustainableDevelopment": "Desarrollo Sostenible"
+    },
+    "contactTitle": "Contacto",
+    "address": "Av. Corrientes 1234, Piso 10\nBuenos Aires, Argentina",
+    "phone": "+54 11 4567-8900",
+    "email": "contacto@vhq.com",
+    "copyright": "© 2025 VHQ. Todos los derechos reservados.",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfUse": "Términos de Uso"
+  }
+}

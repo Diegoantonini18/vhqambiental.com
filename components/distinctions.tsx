@@ -1,66 +1,49 @@
 "use client"
 
 import Image from "next/image"
-import { useLocale } from "@/components/locale-provider" // Importa el hook useLocale
+import { useLocale } from "@/components/locale-provider"
 
-type DistinctionsProps = {}
+export default function Distinctions() {
+  const { messages } = useLocale()
 
-export default function Distinctions({}: DistinctionsProps) {
-  const { messages } = useLocale() // Usa el hook para obtener los mensajes
+  if (!messages || !messages.distinctions || !messages.distinctions.members) return null
 
-  if (!messages) return null // Muestra un estado de carga o null si los mensajes aún no están disponibles
+  const members = messages.distinctions.members
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
       <div className="container px-4 md:px-6">
+        {/* Sección superior: Título y subtítulo */}
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold sm:text-5xl tracking-normal">{messages.distinctions.title}</h2>
-            <div className="h-1 w-20 bg-primary mx-auto" />
-          </div>
+          <span className="bg-lime-500 text-black px-3 py-1 text-xs font-semibold rounded-full inline-block">
+            {messages.distinctions.tag}
+          </span>
+          <h2 className="text-3xl font-bold sm:text-5xl tracking-normal text-gray-900">
+            {messages.distinctions.mainTitle}
+          </h2>
+          <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            {messages.distinctions.subtitle}
+          </p>
         </div>
-        <div className="flex flex-col items-center justify-center leading-10">
-          {/* Fila superior: Imágenes 2, 3, 4 */}
-          <div className="grid grid-cols-3 gap-4 md:gap-8 items-center justify-center w-full mb-20 ml-10 mr-0 py-[] px-[4rem]">
-            {messages.distinctions.logos.slice(1, 4).map((logo, index) => (
-              <div
-                key={`top-${index}`}
-                className="relative flex justify-center items-center p-2 md:p-4 h-[150px] md:h-[200px]"
-              >
-                {" "}
-                {/* Contenedor con altura definida y relative */}
+
+        {/* Cuadrícula de miembros del equipo */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start justify-center">
+          {members.map((member, index) => (
+            <div key={index} className="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md">
+              <div className="relative w-full h-60 mb-4 rounded-lg overflow-hidden">
                 <Image
-                  src={logo || "/placeholder.svg"}
-                  alt={`Distinction Logo ${index + 2}`}
-                  layout="fill" // Usar layout="fill"
-                  objectFit="contain" // Mantener la proporción y contener dentro del espacio
-                  className="w-full h-full" // Asegurar que la imagen llene el contenedor
+                  src={member.image || "/placeholder.svg"}
+                  alt={member.name}
+                  fill
+                  objectFit="cover"
+                  className="rounded-lg"
                 />
               </div>
-            ))}
-          </div>
-
-          {/* Fila inferior: Imágenes 1, 5 */}
-          <div className="grid grid-cols-2 gap-4 md:gap-8 items-center justify-center max-w-3xl mx-auto w-full">
-            {messages.distinctions.logos
-              .filter((_, index) => index === 0 || index === 4)
-              .map((logo, index) => (
-                <div
-                  key={`bottom-${index}`}
-                  className="relative flex justify-center items-center p-2 md:p-4 h-[100px] md:h-[120px]"
-                >
-                  {" "}
-                  {/* Contenedor con altura definida y relative */}
-                  <Image
-                    src={logo || "/placeholder.svg"}
-                    alt={`Distinction Logo ${index === 0 ? 1 : 5}`}
-                    layout="fill" // Usar layout="fill"
-                    objectFit="contain" // Mantener la proporción y contener dentro del espacio
-                    className="w-full h-full" // Asegurar que la imagen llene el contenedor
-                  />
-                </div>
-              ))}
-          </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+              <p className="text-md text-gray-700 mb-1">{member.title}</p>
+              <p className="text-sm text-gray-500">{member.specialty}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

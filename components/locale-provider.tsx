@@ -14,43 +14,28 @@ interface Messages {
       line3: string
     }
     nav: {
+      home: string
       aboutUs: string
       services: string
-      legalMatrix: string // Añadido legalMatrix
-      contact: string // Mantener contact para el footer y otros usos si es necesario
+      legalMatrix: string
+      contact: string
     }
-    contactButton: {
-      text: string
-      link: string
-    }
+    contactButton: string
     languageSwitcher: string
   }
   hero: {
-    mainHero: {
-      topLabel: string
+    tag: string
+    buttonText: string
+    slides: {
       title: string
-      cta1: {
-        text: string
-        link: string
-      }
-      cta2: {
-        text: string
-        link: string
-      }
-      projectCard: {
-        image: string
-        title: string
-      }
-      stats: {
-        value: string
-        description: string
-      }[]
-      backgroundImage: string
-    }
+      subtitle: string
+      image: string
+    }[]
   }
   services: {
-    title: string
-    description: string
+    tag: string
+    mainTitle: string
+    learnMoreText: string
     cards: {
       icon: "Leaf" | "Scale" | "FileText" | "Users" | "Building"
       color: string
@@ -61,69 +46,75 @@ interface Messages {
     }[]
   }
   aboutUs: {
-    title: string
-    leadersSection: {
+    tag: string
+    mainTitle: string
+    paragraph1: string
+    paragraph2: string
+    establishedYear: string
+    establishedSince: string
+    tabs: {
       title: string
-      paragraph1: string
-      paragraph2: string
-      paragraph3: string
-      achievements: { text: string; icon: string }[]
-    }
-    problemSolvingSection: {
-      title: string
-      card: {
-        company: string
-        quote: string
-        cta: {
-          text: string
-          link: string
-        }
-        author: string
-        authorTitle: string
-        image: string
-      }
-      features: {
-        text: string
-        icon: "Car" | "Sun" | "Wind"
-      }[]
-    }
-    teamSection: {
-      title: string
-      description: string // Added description for teamSection
-      members: {
-        image: string
-        name: string
-        title: string
-        specialty: string
-        description: string
-      }[]
-      features: {
-        text: string
-        icon: "Award" // New icon type for team features
-      }[]
+      content: string
+    }[]
+    missionVisionValues: {
+      missionTitle: string
+      missionDescription: string
+      visionTitle: string
+      visionDescription: string
+      valuesTitle: string
+      valuesList: string[]
     }
   }
   distinctions: {
-    title: string
-    logos: string[] // Reverted to logos array
-  }
-  clients: {
-    title: string
-    description: string // Added description for clients
-    items: {
-      icon: "ShieldCheck" | "Globe" | "Briefcase" | "Heart" | "Activity" | "Zap" // Specific icons for clients
+    tag: string
+    mainTitle: string
+    subtitle: string
+    members: {
+      image: string
+      name: string
       title: string
+      specialty: string
       description: string
     }[]
+    logos: string[]
+  }
+  clients: {
+    tag: string
+    mainTitle: string
+    subtitle: string
+    testimonial: {
+      description: string
+      name: string
+      company: string
+      image: string
+    }
+    logos: string[]
   }
   contact: {
     title: string
     description: string
-    infoItems: {
-      icon: "Mail" | "Phone" | "MapPin" | "Clock"
-      title: string
-      description: string
-    }[]
+    backgroundImage: string
+    infoTitle: string
+    email: {
+      label: string
+      address1: string
+      address2?: string
+    }
+    phone: {
+      label: string
+      number1: string
+      number2?: string
+    }
+    address: {
+      label: string
+      street: string
+      city: string
+    }
+    hours: {
+      label: string
+      weekday: string
+      saturday: string
+    }
     formTitle: string
     fullNameLabel: string
     fullNamePlaceholder: string
@@ -138,26 +129,31 @@ interface Messages {
     submitButton: string
   }
   footer: {
-    topSection: {
-      title: string
-      description: string
-      cta: {
-        text: string
-        link: string
+    description: string
+    columns: {
+      col1: {
+        title: string
+        content: string
       }
-      features: {
-        text: string
-        icon: "CheckCircle"
-      }[]
+      col2: {
+        title1: string
+        address1: string
+        title2: string
+        address2: string
+      }
+      col3: {
+        title1: string
+        email: string
+        title2: string
+        phone: string
+      }
+      col4: {
+        title1: string
+        helpLinkText: string
+        helpLinkUrl: string
+        title2: string
+      }
     }
-    navLinks: {
-      text: string
-      link: string
-    }[]
-    socialLinks: {
-      icon: "Linkedin" | "X" | "Facebook" | "Instagram"
-      link: string
-    }[]
     copyright: string
     privacyPolicy: string
     termsOfUse: string
@@ -182,7 +178,6 @@ export default function LocaleProvider({ children, initialLocale }: LocaleProvid
   const [messages, setMessages] = useState<Messages | null>(null)
 
   useEffect(() => {
-    // Intenta cargar el locale desde localStorage al montar el componente
     const storedLocale = localStorage.getItem("locale") as Locale
     if (storedLocale && ["en", "es"].includes(storedLocale)) {
       setLocaleState(storedLocale)
@@ -190,11 +185,10 @@ export default function LocaleProvider({ children, initialLocale }: LocaleProvid
   }, [])
 
   useEffect(() => {
-    // Carga los mensajes basados en el locale actual
     const loadMessages = async () => {
       const dict = await getClientDictionary(locale)
-      setMessages(dict as Messages) // Asegura el tipo
-      localStorage.setItem("locale", locale) // Guarda el locale en localStorage
+      setMessages(dict as Messages)
+      localStorage.setItem("locale", locale)
     }
     loadMessages()
   }, [locale])
@@ -206,7 +200,6 @@ export default function LocaleProvider({ children, initialLocale }: LocaleProvid
   return <LocaleContext.Provider value={{ locale, setLocale, messages }}>{children}</LocaleContext.Provider>
 }
 
-// Hook personalizado para consumir el contexto
 export const useLocale = () => {
   const context = useContext(LocaleContext)
   if (context === undefined) {

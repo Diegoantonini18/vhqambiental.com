@@ -10,13 +10,12 @@ import Footer from "@/components/footer"
 
 interface HomePageProps {
   searchParams: {
-    locale?: string // Mantener searchParams por si se usa para algo más, pero no para el locale principal
+    locale?: string
   }
 }
 
 export default async function HomePage({ searchParams }: HomePageProps) {
-  // Determina el locale inicial basado en el parámetro de búsqueda locale
-  const initialLocale = "en" // Siempre renderiza estáticamente con 'en' por defecto
+  const initialLocale = "en"
 
   return (
     <LocaleProvider initialLocale={initialLocale}>
@@ -24,7 +23,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
         <Header />
         <main className="flex-1">
           {" "}
-          {/* Removed pt-20 */}
+          {/* Eliminado pt-20 */}
           <Hero />
           <div id="services">
             <Services />
@@ -32,7 +31,9 @@ export default async function HomePage({ searchParams }: HomePageProps) {
           <div className="bg-secondary/10">
             <AboutUs />
           </div>
-
+          <div className="bg-white">
+            <Distinctions />
+          </div>
           <div className="bg-secondary/20">
             <Clients />
           </div>

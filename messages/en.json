@@ -1,6 +1,5 @@
 {
   "header": {
-
     "nav": {
       "aboutUs": "ABOUT US",
       "services": "SERVICES",
@@ -129,6 +128,13 @@
           "title": "Senior Associate",
           "specialty": "Renewable Energies",
           "description": "Expert in regulatory frameworks for clean energy and sustainable projects. Specialist in energy transition."
+        },
+        {
+          "image": "/placeholder.svg?height=150&width=150",
+          "name": "Lic. Sofia Ramirez",
+          "title": "Environmental Analyst",
+          "specialty": "Environmental Management Systems",
+          "description": "Specialized in ISO 14001 implementation and environmental impact assessments. Passionate about sustainable practices."
         }
       ]
     }

@@ -1,6 +1,5 @@
 {
   "header": {
-  
     "nav": {
       "aboutUs": "NOSOTROS",
       "services": "SERVICIOS",
@@ -115,25 +114,32 @@
       "title": "Nuestro Equipo",
       "members": [
         {
-          "image": "/placeholder.svg?height=150&width=150",
-          "name": "Dra. María Elena Vásquez",
-          "title": "Socia Fundadora",
+          "image": "/images/magdalena.png?height=150&width=150",
+          "name": "MARÍA MAGDALENA VENDITTI",
+          "title": "Socia",
           "specialty": "Derecho Ambiental Corporativo",
           "description": "Especialista en regulaciones ambientales con más de 20 años de experiencia. Experta en compliance ambiental y sostenibilidad empresarial."
         },
         {
-          "image": "/placeholder.svg?height=150&width=150",
-          "name": "Dr. Carlos Mendoza",
-          "title": "Socio Senior",
+          "image": "/images/lucia.png?height=150&width=150",
+          "name": "LUCÍA SESTO",
+          "title": "Socia",
           "specialty": "Litigios Ambientales",
           "description": "Litigante experimentado en casos de responsabilidad ambiental y disputas corporativas. Máster en Derecho Ambiental Internacional."
         },
         {
-          "image": "/placeholder.svg?height=150&width=150",
-          "name": "Dr. Andrés Herrera",
-          "title": "Asociado Senior",
+          "image": "/images/carolina.png?height=150&width=150",
+          "name": "MARÍA CAROLINA QUINTEROS",
+          "title": "Of Counsel",
           "specialty": "Energías Renovables",
           "description": "Experto en marcos regulatorios para energías limpias y proyectos sostenibles. Especialista en transición energética."
+        },
+        {
+          "image": "/images/victoria.png?height=150&width=150",
+          "name": "MARÍA VICTORIA ARROCAIN",
+          "title": "Abogada",
+          "specialty": "Sistemas de Gestión Ambiental",
+          "description": "Especializada en implementación de ISO 14001 y evaluaciones de impacto ambiental. Apasionada por las prácticas sostenibles."
         }
       ]
     }
@@ -151,14 +157,11 @@
   "clients": {
     "title": "Nuestros Clientes",
     "logos": [
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160"
+      "/images/logo1.png",
+      "/images/logo2.png",
+      "/images/logo3.png",
+      "/images/logo4.jpg",
+            "/images/logo5.png"
     ]
   },
   "contact": {

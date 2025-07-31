@@ -11,9 +11,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "VHQ Derecho Ambiental",
-  description: "Expertos en derecho ambiental con más de 15 años de experiencia",
-  generator: "v0.dev",
+  title: "VHQ Ambiental – Abogados Derecho Ambiental",
+  description: "Somos un estudio especializado en derecho ambiental. Brindamos servicios legales en asuntos contenciosos, regulatorios y de asesoramiento integral, acompañando a nuestros clientes en el desarrollo de una adecuada gestión ambiental y de higiene y seguridad. ",
+  generator: "Antualia",
 }
 
 export default function RootLayout({

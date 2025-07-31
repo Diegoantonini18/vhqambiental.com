@@ -5,31 +5,48 @@
       "services": "SERVICES",
       "legalMatrix": "LEGAL MATRIX"
     },
-    "contactButton": "CONTACT US",
+    "contactButton": {
+      "text": "CONTACT US",
+      "link": "/#contact"
+    },
     "languageSwitcher": "English"
   },
   "hero": {
-    "slides": [
-      {
-        "title": "Specialized Legal Advice",
-        "subtitle": "More than 15 years of experience in environmental regulations",
-        "image": "/images/3-creatividad-1.jpeg"
+    "mainHero": {
+      "topLabel": "#1 Energy provider in the world",
+      "title": "New Energy for the Future",
+      "cta1": {
+        "text": "Get in touch",
+        "link": "/#contact"
       },
-      {
-        "title": "Environmental Law Experts",
-        "subtitle": "Comprehensive solutions for your business",
-        "image": "/images/1-solidez-1.jpeg"
+      "cta2": {
+        "text": "Our services",
+        "link": "/#services"
       },
-      {
-        "title": "Sustainable Legal Solutions",
-        "subtitle": "Guiding you through complex environmental challenges",
-        "image": "/images/2-perspectiva-2.jpeg"
-      }
-    ]
+      "projectCard": {
+        "image": "/images/1-solidez-1.jpeg",
+        "title": "Discover Our Recent Project"
+      },
+      "stats": [
+        {
+          "value": "6 mil",
+          "description": "The company's annual net income"
+        },
+        {
+          "value": "315",
+          "description": "Projects completed worldwide"
+        },
+        {
+          "value": "120K",
+          "description": "Employees work in all parts of the world"
+        }
+      ],
+      "backgroundImage": "/images/3-creatividad-1.jpeg"
+    }
   },
   "services": {
-    "title": "Our Services",
-    "description": "We offer comprehensive solutions in environmental law for companies and organizations committed to sustainability. Our multidisciplinary approach combines legal expertise with technical knowledge to provide excellent advice.",
+    "title": "Focusing on quality, we maintain customer trust",
+    "description": "We ensure that every installation we build has strict quality checks. Sustainable solutions for an environmentally friendly and renewable future.",
     "cards": [
       {
         "icon": "Leaf",
@@ -49,7 +66,7 @@
         "color": "bg-service-teal",
         "title": "Environmental Litigation",
         "description": "Specialized legal representation in cases of environmental damage, regulatory conflicts, administrative appeals, and defense before environmental authorities.",
-        "subServices": ["Legal Defense", "Administrative Resources", "Environmental Mediation", "Damage Repair"],
+        "subServices": ["Legal Defense", "Administrative Resources", "Mediación Ambiental", "Damage Repair"],
         "backgroundImage": "/images/2-perspectiva-2.jpeg"
       },
       {
@@ -92,21 +109,28 @@
         { "text": "ISO 14001 Certification", "icon": "ShieldCheck" }
       ]
     },
-    "missionVisionValues": {
-      "missionTitle": "Our Mission",
-      "missionDescription": "Protect the environment through specialized legal advice, promoting sustainable development and corporate responsibility.",
-      "visionTitle": "Our Vision",
-      "visionDescription": "To be the reference in environmental law, leading the transformation towards a more sustainable and responsible future.",
-      "valuesTitle": "Our Values",
-      "valuesList": [
-        "Commitment to sustainability",
-        "Professional excellence",
-        "Transparency and ethics",
-        "Constant innovation"
+    "problemSolvingSection": {
+      "title": "See how we solve problems, right on target",
+      "card": {
+        "company": "Medtronic",
+        "quote": "We have used services from VHQ for most of our stations, this is our strategic step to continue to increase the number of solar panel usage for our stations, we are very satisfied with the services from VHQ.",
+        "cta": {
+          "text": "View case study",
+          "link": "#"
+        },
+        "author": "Jeniffer Kolobaly",
+        "authorTitle": "CTO EV Medtronic",
+        "image": "/placeholder.svg?height=400&width=600"
+      },
+      "features": [
+        { "icon": "Car", "text": "Electric car charging station" },
+        { "icon": "Sun", "text": "Residential solar panels" },
+        { "icon": "Wind", "text": "Wind power for industry" }
       ]
     },
     "teamSection": {
-      "title": "Our Team",
+      "title": "Our Team, dedicated to your success",
+      "description": "Meet the experienced professionals who drive VHQ's commitment to excellence in environmental law. Our diverse team brings together specialized knowledge and a shared passion for sustainability.",
       "members": [
         {
           "image": "/placeholder.svg?height=150&width=150",
@@ -131,12 +155,13 @@
         },
         {
           "image": "/placeholder.svg?height=150&width=150",
-          "name": "Lic. Sofia Ramirez",
-          "title": "Environmental Analyst",
-          "specialty": "Environmental Management Systems",
-          "description": "Specialized in ISO 14001 implementation and environmental impact assessments. Passionate about sustainable practices."
+          "name": "Dr. Laura Gómez",
+          "title": "Junior Associate",
+          "specialty": "Environmental Compliance",
+          "description": "Passionate about environmental law and new technologies. Specializes in regulatory compliance for emerging industries."
         }
-      ]
+      ],
+      "features": [{ "icon": "Award", "text": "Recognized for Excellence" }]
     }
   },
   "distinctions": {
@@ -150,42 +175,66 @@
     ]
   },
   "clients": {
-    "title": "Our Clients",
-    "logos": [
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160",
-      "/placeholder.svg?height=80&width=160"
+    "title": "Our Clients, trust us with their environmental needs",
+    "description": "We are proud to partner with a diverse range of clients, from multinational corporations to innovative startups, helping them navigate complex environmental regulations and achieve their sustainability goals.",
+    "items": [
+      {
+        "icon": "ShieldCheck",
+        "title": "Trend Micro",
+        "description": "Leading cybersecurity solutions for global enterprises."
+      },
+      {
+        "icon": "Globe",
+        "title": "Telia Cygate",
+        "description": "Network and IT services for businesses in the Nordics."
+      },
+      {
+        "icon": "Briefcase",
+        "title": "Orange Business",
+        "description": "Digital transformation services for businesses worldwide."
+      },
+      {
+        "icon": "Heart",
+        "title": "Headspace",
+        "description": "Global leader in mindfulness and meditation apps."
+      },
+      {
+        "icon": "Activity",
+        "title": "Medtronic",
+        "description": "Global healthcare technology leader, improving lives."
+      },
+      {
+        "icon": "Zap",
+        "title": "Client Six",
+        "description": "Innovative solutions for a sustainable future."
+      }
     ]
   },
   "contact": {
-    "title": "Contact",
+    "title": "Contact, Us",
     "description": "We are committed to providing the best environmental legal advice. Our team of experts is available for strategic consultations, environmental emergencies, and long-term projects. Each consultation is treated with maximum confidentiality and professionalism.",
-    "infoTitle": "Contact Information",
-    "email": {
-      "label": "Email",
-      "address1": "contacto@vhqambiental.com",
-      "address2": "info@vhqambiental.com"
-    },
-    "phone": {
-      "label": "Phone",
-      "number1": "+54 11 4567-8900",
-      "number2": "+54 11 4567-8901"
-    },
-    "address": {
-      "label": "Address",
-      "street": "Av. Corrientes 1234, Piso 10",
-      "city": "Buenos Aires, Argentina"
-    },
-    "hours": {
-      "label": "Hours",
-      "weekday": "Mon - Fri: 9:00 - 18:00",
-      "saturday": "Sat: 9:00 - 13:00"
-    },
+    "infoItems": [
+      {
+        "icon": "Mail",
+        "title": "Email",
+        "description": "contacto@vhqambiental.com\ninfo@vhqambiental.com"
+      },
+      {
+        "icon": "Phone",
+        "title": "Phone",
+        "description": "+54 11 4567-8900\n+54 11 4567-8901"
+      },
+      {
+        "icon": "MapPin",
+        "title": "Address",
+        "description": "Av. Corrientes 1234, Piso 10\nBuenos Aires, Argentina"
+      },
+      {
+        "icon": "Clock",
+        "title": "Hours",
+        "description": "Mon - Fri: 9:00 - 18:00\nSat: 9:00 - 13:00"
+      }
+    ],
     "formTitle": "Send Us a Message",
     "fullNameLabel": "Full Name *",
     "fullNamePlaceholder": "Your name",
@@ -200,26 +249,31 @@
     "submitButton": "Send Message"
   },
   "footer": {
-    "description": "Experts in environmental law committed to sustainability and responsible development.",
-    "quickLinksTitle": "Quick Links",
-    "quickLinks": {
-      "home": "Home",
-      "services": "Services",
-      "aboutUs": "About Us",
-      "contact": "Contact"
+    "topSection": {
+      "title": "It's time to support zero pollution, with renewable resources",
+      "description": "By increasing the effectiveness and efficiency of electricity use, the use of renewable resources is very profitable for all industrial services.",
+      "cta": {
+        "text": "Get in touch",
+        "link": "/#contact"
+      },
+      "features": [
+        { "text": "Experienced for more than 10 years", "icon": "CheckCircle" },
+        { "text": "Support for the latest technology", "icon": "CheckCircle" }
+      ]
     },
-    "servicesTitle": "Services",
-    "services": {
-      "environmentalConsulting": "Environmental Consulting",
-      "environmentalLitigation": "Environmental Litigation",
-      "regulatoryCompliance": "Regulatory Compliance",
-      "sustainableDevelopment": "Sustainable Development"
-    },
-    "contactTitle": "Contact",
-    "address": "Av. Corrientes 1234, Piso 10\nBuenos Aires, Argentina",
-    "phone": "+54 11 4567-8900",
-    "email": "contacto@vhqambiental.com",
-    "copyright": "© 2024 VHQ. All rights reserved.",
+    "navLinks": [
+      { "text": "Home", "link": "/" },
+      { "text": "About Us", "link": "/#about-us" },
+      { "text": "Services", "link": "/#services" },
+      { "text": "Contact", "link": "/#contact" }
+    ],
+    "socialLinks": [
+      { "icon": "Linkedin", "link": "#" },
+      { "icon": "X", "link": "#" },
+      { "icon": "Facebook", "link": "#" },
+      { "icon": "Instagram", "link": "#" }
+    ],
+    "copyright": "© 2024 VHQ Inc. All rights reserved",
     "privacyPolicy": "Privacy Policy",
     "termsOfUse": "Terms of Use"
   }

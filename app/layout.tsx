@@ -12,7 +12,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "VHQ Ambiental – Abogados Derecho Ambiental",
-  description: "Somos un estudio especializado en derecho ambiental. Brindamos servicios legales en asuntos contenciosos, regulatorios y de asesoramiento integral, acompañando a nuestros clientes en el desarrollo de una adecuada gestión ambiental y de higiene y seguridad. ",
+  description:
+    "Somos un estudio especializado en derecho ambiental. Brindamos servicios legales en asuntos contenciosos, regulatorios y de asesoramiento integral, acompañando a nuestros clientes en el desarrollo de una adecuada gestión ambiental y de higiene y seguridad. ",
   generator: "Antualia",
 }
 
@@ -24,8 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable}`}>
       <head>{/* No es necesario un bloque <style> aquí si se usa Tailwind con la variable */}</head>
-      <body className="font-inter">
-        {children}
+      <body className="font-inter bg-gray-100 min-h-screen">
+        <div className="relative mx-auto my-8 max-w-[1400px] bg-white rounded-[40px] shadow-xl overflow-hidden">
+          {children}
+        </div>
         <WhatsAppButton
           phoneNumber="5491112345678"
           message="Hola, me gustaría obtener más información sobre sus servicios."

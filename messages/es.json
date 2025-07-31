@@ -5,32 +5,49 @@
       "services": "SERVICIOS",
       "legalMatrix": "MATRIZ LEGAL"
     },
-    "contactButton": "CONTACTO",
+    "contactButton": {
+      "text": "CONTACTO",
+      "link": "/#contact"
+    },
     "languageSwitcher": "Español"
   },
   "hero": {
-    "slides": [
-      {
-        "title": "Asesoría Legal Especializada",
-        "subtitle": "Más de 15 años de experiencia en regulaciones ambientales",
-        "image": "/images/3-creatividad-1.jpeg"
+    "mainHero": {
+      "topLabel": "#1 Proveedor de Energía en el Mundo",
+      "title": "Nueva Energía para el Futuro",
+      "cta1": {
+        "text": "Contáctanos",
+        "link": "/#contact"
       },
-      {
-        "title": "Expertos en Derecho Ambiental",
-        "subtitle": "Soluciones integrales para su negocio",
-        "image": "/images/1-solidez-1.jpeg"
+      "cta2": {
+        "text": "Nuestros servicios",
+        "link": "/#services"
       },
-      {
-        "title": "Soluciones Legales Sostenibles",
-        "subtitle": "Guiándole a través de complejos desafíos ambientales",
-        "image": "/images/2-perspectiva-2.jpeg"
-      }
-    ]
+      "projectCard": {
+        "image": "/images/2-perspectiva-2.jpeg",
+        "title": "Descubre nuestro software Gala"
+      },
+      "stats": [
+        {
+          "value": "6 mil",
+          "description": "Ingresos netos anuales de la empresa"
+        },
+        {
+          "value": "315",
+          "description": "Proyectos completados a nivel mundial"
+        },
+        {
+          "value": "120K",
+          "description": "Empleados en todas partes del mundo"
+        }
+      ],
+      "backgroundImage": "/images/3-creatividad-1.jpeg"
+    }
   },
   "services": {
-    "title": "Nuestros Servicios",
-    "description": "Ofrecemos soluciones integrales en derecho ambiental para empresas y organizaciones comprometidas con la sostenibilidad. Nuestro enfoque multidisciplinario combina expertise legal con conocimiento técnico para brindar asesoramiento de excelencia.",
-    "cards": [
+    "title": "Enfocados en la excelencia jurídica, generamos confianza sostenible",
+  "description": "Ofrecemos soluciones legales integrales con altos estándares profesionales, ayudando a nuestros clientes a cumplir con la normativa ambiental y a construir relaciones responsables con su entorno.", 
+  "cards": [
       {
         "icon": "Leaf",
         "color": "bg-primary",
@@ -97,21 +114,28 @@
         { "text": "Certificación ISO 14001", "icon": "ShieldCheck" }
       ]
     },
-    "missionVisionValues": {
-      "missionTitle": "Nuestra Misión",
-      "missionDescription": "Proteger el medio ambiente a través de asesoramiento jurídico especializado, promoviendo el desarrollo sostenible y la responsabilidad empresarial.",
-      "visionTitle": "Nuestra Visión",
-      "visionDescription": "Ser el referente en derecho ambiental, liderando la transformación hacia un futuro más sostenible y responsable.",
-      "valuesTitle": "Nuestros Valores",
-      "valuesList": [
-        "Compromiso con la sostenibilidad",
-        "Excelencia profesional",
-        "Transparencia y ética",
-        "Innovación constante"
+    "problemSolvingSection": {
+      "title": "Mira cómo resolvemos problemas, directo al objetivo",
+      "card": {
+        "company": "Medtronic",
+        "quote": "Hemos confiado en los servicios del estudio para acompañar nuestros procesos regulatorios y de gestión ambiental. Su enfoque especializado y su compromiso han sido claves para avanzar con seguridad y respaldo jurídico en nuestros proyectos.",
+        "cta": {
+          "text": "Ver caso de estudio",
+          "link": "#"
+        },
+        "author": "Jeniffer Kolobaly",
+        "authorTitle": "CEO EV Medtronic",
+        "image": "/images/2-perspectiva-2.jpeg"
+      },
+      "features": [
+        { "icon": "Car", "text": "Estación de carga de coches eléctricos" },
+        { "icon": "Sun", "text": "Paneles solares residenciales" },
+        { "icon": "Wind", "text": "Energía eólica para la industria" }
       ]
     },
     "teamSection": {
-      "title": "Nuestro Equipo",
+      "title": "Nuestro Equipo, dedicado a tu éxito",
+      "description": "Conoce a los profesionales experimentados que impulsan el compromiso de VHQ con la excelencia en el derecho ambiental. Nuestro equipo diverso reúne conocimientos especializados y una pasión compartida por la sostenibilidad.",
       "members": [
         {
           "image": "/images/magdalena.png?height=150&width=150",
@@ -141,7 +165,8 @@
           "specialty": "Sistemas de Gestión Ambiental",
           "description": "Especializada en implementación de ISO 14001 y evaluaciones de impacto ambiental. Apasionada por las prácticas sostenibles."
         }
-      ]
+      ],
+      "features": [{ "icon": "Award", "text": "Reconocidos por la Excelencia" }]
     }
   },
   "distinctions": {
@@ -155,38 +180,66 @@
     ]
   },
   "clients": {
-    "title": "Nuestros Clientes",
-    "logos": [
-      "/images/logo1.png",
-      "/images/logo2.png",
-      "/images/logo3.png",
-      "/images/logo4.jpg",
-            "/images/logo5.png"
+    "title": "Nuestros Clientes, confían en nosotros para sus necesidades ambientales",
+    "description": "Estamos orgullosos de asociarnos con una amplia gama de clientes, desde corporaciones multinacionales hasta startups innovadoras, ayudándoles a navegar complejas regulaciones ambientales y alcanzar sus objetivos de sostenibilidad.",
+    "items": [
+      {
+        "icon": "ShieldCheck",
+        "title": "Trend Micro",
+        "description": "Soluciones líderes en ciberseguridad para empresas globales."
+      },
+      {
+        "icon": "Globe",
+        "title": "Telia Cygate",
+        "description": "Servicios de red y TI para empresas en los países nórdicos."
+      },
+      {
+        "icon": "Briefcase",
+        "title": "Orange Business",
+        "description": "Servicios de transformación digital para empresas en todo el mundo."
+      },
+      {
+        "icon": "Heart",
+        "title": "Headspace",
+        "description": "Líder mundial en aplicaciones de mindfulness y meditación."
+      },
+      {
+        "icon": "Activity",
+        "title": "Medtronic",
+        "description": "Líder global en tecnología de la salud, mejorando vidas."
+      },
+      {
+        "icon": "Zap",
+        "title": "Cliente Seis",
+        "description": "Soluciones innovadoras para un futuro sostenible."
+      }
     ]
   },
   "contact": {
-    "title": "Contacto",
+    "title": "Contacto, Nosotros",
     "description": "Estamos comprometidos en brindarle el mejor asesoramiento legal ambiental. Nuestro equipo de expertos está disponible para consultas estratégicas, emergencias ambientales y proyectos de largo plazo. Cada consulta es tratada con la máxima confidencialidad y profesionalismo.",
-    "infoTitle": "Información de Contacto",
-    "email": {
-      "label": "Email",
-      "address1": "contacto@vhqambiental.com"
-    },
-    "phone": {
-      "label": "Teléfono",
-      "number1": "+54 11 4567-8900",
-      "number2": "+54 11 4567-8901"
-    },
-    "address": {
-      "label": "Dirección",
-      "street": "Av. Corrientes 1234, Piso 10",
-      "city": "Buenos Aires, Argentina"
-    },
-    "hours": {
-      "label": "Horarios",
-      "weekday": "Lun - Vie: 9:00 - 18:00",
-      "saturday": "Sáb: 9:00 - 13:00"
-    },
+    "infoItems": [
+      {
+        "icon": "Mail",
+        "title": "Email",
+        "description": "contacto@vhqambiental.com\ninfo@vhqambiental.com"
+      },
+      {
+        "icon": "Phone",
+        "title": "Teléfono",
+        "description": "+54 11 4567-8900\n+54 11 4567-8901"
+      },
+      {
+        "icon": "MapPin",
+        "title": "Dirección",
+        "description": "Av. Corrientes 1234, Piso 10\nBuenos Aires, Argentina"
+      },
+      {
+        "icon": "Clock",
+        "title": "Horarios",
+        "description": "Lun - Vie: 9:00 - 18:00\nSáb: 9:00 - 13:00"
+      }
+    ],
     "formTitle": "Envíanos un Mensaje",
     "fullNameLabel": "Nombre completo *",
     "fullNamePlaceholder": "Tu nombre",
@@ -201,26 +254,31 @@
     "submitButton": "Enviar Mensaje"
   },
   "footer": {
-    "description": "Expertos en derecho ambiental comprometidos con la sostenibilidad y el desarrollo responsable.",
-    "quickLinksTitle": "Enlaces Rápidos",
-    "quickLinks": {
-      "home": "Inicio",
-      "services": "Servicios",
-      "aboutUs": "Nosotros",
-      "contact": "Contacto"
+    "topSection": {
+      "title": "Es hora de impulsar el cumplimiento ambiental",
+  "description": "Un adecuado asesoramiento jurídico permite a las empresas cumplir con la normativa ambiental, optimizar sus procesos y reducir riesgos legales, promoviendo una gestión sustentable y responsable.",
+"cta": {
+        "text": "Ponte en contacto",
+        "link": "/#contact"
+      },
+      "features": [
+        { "text": "Más de 10 años de experiencia", "icon": "CheckCircle" },
+        { "text": "Soporte para la última tecnología", "icon": "CheckCircle" }
+      ]
     },
-    "servicesTitle": "Servicios",
-    "services": {
-      "environmentalConsulting": "Consultoría Ambiental",
-      "environmentalLitigation": "Litigios Ambientales",
-      "regulatoryCompliance": "Compliance Regulatorio",
-      "sustainableDevelopment": "Desarrollo Sostenible"
-    },
-    "contactTitle": "Contacto",
-    "address": "Av. Corrientes 1234, Piso 10\nBuenos Aires, Argentina",
-    "phone": "+54 11 4567-8900",
-    "email": "contacto@vhq.com",
-    "copyright": "© 2025 VHQ. Todos los derechos reservados.",
+    "navLinks": [
+      { "text": "Inicio", "link": "/" },
+      { "text": "Nosotros", "link": "/#about-us" },
+      { "text": "Servicios", "link": "/#services" },
+      { "text": "Contacto", "link": "/#contact" }
+    ],
+    "socialLinks": [
+      { "icon": "Linkedin", "link": "#" },
+      { "icon": "X", "link": "#" },
+      { "icon": "Facebook", "link": "#" },
+      { "icon": "Instagram", "link": "#" }
+    ],
+    "copyright": "© 2025 VHQ Inc. Todos los derechos reservados.",
     "privacyPolicy": "Política de Privacidad",
     "termsOfUse": "Términos de Uso"
   }

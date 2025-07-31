@@ -1,6 +1,6 @@
 import LocaleProvider from "@/components/locale-provider"
 import Header from "@/components/header"
-import HeroCarousel from "@/components/hero-carousel"
+import Hero from "@/components/hero"
 import Services from "@/components/services"
 import AboutUs from "@/components/about-us"
 import Distinctions from "@/components/distinctions"
@@ -21,30 +21,26 @@ export default async function HomePage({ searchParams }: HomePageProps) {
   return (
     <LocaleProvider initialLocale={initialLocale}>
       <div className="flex flex-col min-h-screen">
-        <Header /> {/* Ya no necesita props de mensajes o locale */}
-        <main className="flex-1 pt-20">
-          <HeroCarousel /> {/* Ya no necesita props de mensajes */}
+        <Header />
+        <main className="flex-1">
+          {" "}
+          {/* Removed pt-20 */}
+          <Hero />
           <div id="services">
-            {" "}
-            {/* Añadido ID para desplazamiento suave */}
-            <Services /> {/* Ya no necesita props de mensajes */}
+            <Services />
           </div>
           <div className="bg-secondary/10">
-            <AboutUs /> {/* Ya no necesita props de mensajes */}
+            <AboutUs />
           </div>
-          <div className="bg-white">
-            <Distinctions /> {/* Ya no necesita props de mensajes */}
-          </div>
+
           <div className="bg-secondary/20">
-            <Clients /> {/* Ya no necesita props de mensajes */}
+            <Clients />
           </div>
           <div id="contact">
-            {" "}
-            {/* Añadido ID para desplazamiento suave */}
-            <Contact /> {/* Ya no necesita props de mensajes */}
+            <Contact />
           </div>
         </main>
-        <Footer /> {/* Ya no necesita props de mensajes o locale */}
+        <Footer />
       </div>
     </LocaleProvider>
   )

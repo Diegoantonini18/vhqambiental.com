@@ -21,36 +21,40 @@ export default function Header() {
   if (!messages) return null // Muestra un estado de carga o null si los mensajes aún no están disponibles
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex h-20 w-full items-center justify-between px-4 md:px-6 border-b bg-white">
+    <header className="flex h-20 w-full items-center justify-between px-4 md:px-6 bg-white">
       <Link href="/" className="flex items-center gap-2" prefetch={false}>
         {" "}
         {/* Eliminado ?locale=${locale} */}
         <Image src="/images/vhq-logo.png" alt="VHQ Derecho Ambiental Logo" width={160} height={40} priority />
       </Link>
-      <div className="flex items-center gap-6">
-        <nav className="hidden md:flex items-center gap-6">
-          <Link
-            href="/#about-us" // Asumiendo que tienes un ID "about-us" en la sección
-            className="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}
-          >
-            {messages.header.nav.aboutUs}
-          </Link>
-          <Link
-            href="/#services" // Enlace directo a la sección de servicios
-            className="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}
-          >
-            {messages.header.nav.services}
-          </Link>
-          <Link
-            href="/#legal-matrix" // Enlace directo a la sección de matriz legal
-            className="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}
-          >
-            {messages.header.nav.legalMatrix}
-          </Link>
-        </nav>
+
+      {/* Centered Navigation */}
+      <nav className="hidden md:flex items-center justify-center flex-grow gap-6">
+        <Link
+          href="/#about-us" // Asumiendo que tienes un ID "about-us" en la sección
+          className="text-sm font-medium hover:text-primary transition-colors duration-200"
+          prefetch={false}
+        >
+          {messages.header.nav.aboutUs}
+        </Link>
+        <Link
+          href="/#services" // Enlace directo a la sección de servicios
+          className="text-sm font-medium hover:text-primary transition-colors duration-200"
+          prefetch={false}
+        >
+          {messages.header.nav.services}
+        </Link>
+        <Link
+          href="/#legal-matrix" // Enlace directo a la sección de matriz legal
+          className="text-sm font-medium hover:text-primary transition-colors duration-200"
+          prefetch={false}
+        >
+          {messages.header.nav.legalMatrix}
+        </Link>
+      </nav>
+
+      {/* Right-aligned elements */}
+      <div className="flex items-center gap-4 md:gap-6">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="text-sm font-medium hover:bg-gray-100 px-2 py-1 h-auto">
@@ -64,13 +68,13 @@ export default function Header() {
           </DropdownMenuContent>
         </DropdownMenu>
         <Button
-          className="bg-primary hover:bg-primary/90 text-white text-sm font-medium px-4 py-2 hidden md:inline-flex rounded-full"
+          className="bg-service-teal hover:bg-service-teal/90 text-white text-sm font-medium px-6 py-3 hidden md:inline-flex rounded-full shadow-md"
           asChild
         >
           <Link href="/#contact" prefetch={false}>
             {" "}
             {/* Enlace directo a la sección de contacto */}
-            {messages.header.contactButton}
+            {messages.header.contactButton.text}
           </Link>
         </Button>
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -92,7 +96,7 @@ export default function Header() {
             <nav className="grid gap-4 py-6">
               <Link
                 href="/#about-us"
-                className="text-lg font-medium hover:underline underline-offset-4"
+                className="text-lg font-medium hover:text-primary transition-colors duration-200"
                 prefetch={false}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -100,7 +104,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/#services"
-                className="text-lg font-medium hover:underline underline-offset-4"
+                className="text-lg font-medium hover:text-primary transition-colors duration-200"
                 prefetch={false}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -108,7 +112,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/#legal-matrix"
-                className="text-lg font-medium hover:underline underline-offset-4"
+                className="text-lg font-medium hover:text-primary transition-colors duration-200"
                 prefetch={false}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -129,11 +133,11 @@ export default function Header() {
                 </DropdownMenuContent>
               </DropdownMenu>
               <Button
-                className="bg-primary hover:bg-primary/90 text-white text-sm font-medium px-4 py-2 rounded-md w-full"
+                className="bg-service-teal hover:bg-service-teal/90 text-white text-sm font-medium px-6 py-3 rounded-full w-full shadow-md"
                 asChild
               >
                 <Link href="/#contact" prefetch={false} onClick={() => setIsMobileMenuOpen(false)}>
-                  {messages.header.contactButton}
+                  {messages.header.contactButton.text}
                 </Link>
               </Button>
             </div>

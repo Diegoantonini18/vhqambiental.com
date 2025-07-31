@@ -19,15 +19,34 @@ interface Messages {
       legalMatrix: string // Añadido legalMatrix
       contact: string // Mantener contact para el footer y otros usos si es necesario
     }
-    contactButton: string // Cambiado de legalMatrixButton
+    contactButton: {
+      text: string
+      link: string
+    }
     languageSwitcher: string
   }
   hero: {
-    slides: {
+    mainHero: {
+      topLabel: string
       title: string
-      subtitle: string
-      image: string
-    }[]
+      cta1: {
+        text: string
+        link: string
+      }
+      cta2: {
+        text: string
+        link: string
+      }
+      projectCard: {
+        image: string
+        title: string
+      }
+      stats: {
+        value: string
+        description: string
+      }[]
+      backgroundImage: string
+    }
   }
   services: {
     title: string
@@ -48,18 +67,29 @@ interface Messages {
       paragraph1: string
       paragraph2: string
       paragraph3: string
-      achievements: string[]
+      achievements: { text: string; icon: string }[]
     }
-    missionVisionValues: {
-      missionTitle: string
-      missionDescription: string
-      visionTitle: string
-      visionDescription: string
-      valuesTitle: string
-      valuesList: string[]
+    problemSolvingSection: {
+      title: string
+      card: {
+        company: string
+        quote: string
+        cta: {
+          text: string
+          link: string
+        }
+        author: string
+        authorTitle: string
+        image: string
+      }
+      features: {
+        text: string
+        icon: "Car" | "Sun" | "Wind"
+      }[]
     }
     teamSection: {
       title: string
+      description: string // Added description for teamSection
       members: {
         image: string
         name: string
@@ -67,40 +97,33 @@ interface Messages {
         specialty: string
         description: string
       }[]
+      features: {
+        text: string
+        icon: "Award" // New icon type for team features
+      }[]
     }
   }
   distinctions: {
     title: string
-    logos: string[]
+    logos: string[] // Reverted to logos array
   }
   clients: {
     title: string
-    logos: string[]
+    description: string // Added description for clients
+    items: {
+      icon: "ShieldCheck" | "Globe" | "Briefcase" | "Heart" | "Activity" | "Zap" // Specific icons for clients
+      title: string
+      description: string
+    }[]
   }
   contact: {
     title: string
     description: string
-    infoTitle: string
-    email: {
-      label: string
-      address1: string
-      address2?: string
-    }
-    phone: {
-      label: string
-      number1: string
-      number2?: string
-    }
-    address: {
-      label: string
-      street: string
-      city: string
-    }
-    hours: {
-      label: string
-      weekday: string
-      saturday: string
-    }
+    infoItems: {
+      icon: "Mail" | "Phone" | "MapPin" | "Clock"
+      title: string
+      description: string
+    }[]
     formTitle: string
     fullNameLabel: string
     fullNamePlaceholder: string
@@ -115,25 +138,26 @@ interface Messages {
     submitButton: string
   }
   footer: {
-    description: string
-    quickLinksTitle: string
-    quickLinks: {
-      home: string
-      services: string
-      aboutUs: string
-      contact: string
+    topSection: {
+      title: string
+      description: string
+      cta: {
+        text: string
+        link: string
+      }
+      features: {
+        text: string
+        icon: "CheckCircle"
+      }[]
     }
-    servicesTitle: string
-    services: {
-      environmentalConsulting: string
-      environmentalLitigation: string
-      regulatoryCompliance: string
-      sustainableDevelopment: string
-    }
-    contactTitle: string
-    address: string
-    phone: string
-    email: string
+    navLinks: {
+      text: string
+      link: string
+    }[]
+    socialLinks: {
+      icon: "Linkedin" | "X" | "Facebook" | "Instagram"
+      link: string
+    }[]
     copyright: string
     privacyPolicy: string
     termsOfUse: string

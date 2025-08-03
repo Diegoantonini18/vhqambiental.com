@@ -172,14 +172,16 @@
       "description": "Hemos confiado en los servicios del estudio para acompañar nuestros procesos regulatorios y de gestión ambiental. Su enfoque especializado y su compromiso han sido claves para avanzar con seguridad y respaldo jurídico en nuestros proyectos",
       "name": "JUAN PEREZ",
       "company": "ARCADIS",
-      "image": "/images/logo3.png"
+      "image": "/images/logo1.webp"
     },
     "logos": [
-      "/images/logo1.png",
-            "/images/logo2.png",
-      "/images/logo3.png",
-      "/images/logo4.jpg",
-      "/images/logo5.png"
+      "/images/logo1.webp",
+            "/images/logo2.webp",
+      "/images/logo3.webp",
+      "/images/logo4.webp",
+      "/images/logo5.webp",
+            "/images/logo6.webp"
+
 
     ]
   },

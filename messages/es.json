@@ -13,8 +13,8 @@
   },
   "hero": {
     "mainHero": {
-      "topLabel": "#1 Proveedor de Energía en el Mundo",
-      "title": "Nueva Energía para el Futuro",
+      "topLabel": "#1 Boutique derecho ambiental",
+      "title": "Liderazgo en derecho ambiental",
       "cta1": {
         "text": "Contáctanos",
         "link": "/#contact"
@@ -29,16 +29,16 @@
       },
       "stats": [
         {
-          "value": "6 mil",
-          "description": "Ingresos netos anuales de la empresa"
+          "value": "120 M",
+          "description": "Ahorro neto de nuestros clientes"
         },
         {
           "value": "315",
-          "description": "Proyectos completados a nivel mundial"
+          "description": "Proyectos completados a nivel país"
         },
         {
-          "value": "120K",
-          "description": "Empleados en todas partes del mundo"
+          "value": "+120",
+          "description": "Estudios hechos en argentina"
         }
       ],
       "backgroundImage": "/images/3-creatividad-1.jpeg"
@@ -183,37 +183,38 @@
     "title": "Nuestros Clientes, confían en nosotros para sus necesidades ambientales",
     "description": "Estamos orgullosos de asociarnos con una amplia gama de clientes, desde corporaciones multinacionales hasta startups innovadoras, ayudándoles a navegar complejas regulaciones ambientales y alcanzar sus objetivos de sostenibilidad.",
     "items": [
-      {
-        "icon": "ShieldCheck",
-        "title": "Trend Micro",
-        "description": "Soluciones líderes en ciberseguridad para empresas globales."
-      },
-      {
-        "icon": "Globe",
-        "title": "Telia Cygate",
-        "description": "Servicios de red y TI para empresas en los países nórdicos."
-      },
-      {
-        "icon": "Briefcase",
-        "title": "Orange Business",
-        "description": "Servicios de transformación digital para empresas en todo el mundo."
-      },
-      {
-        "icon": "Heart",
-        "title": "Headspace",
-        "description": "Líder mundial en aplicaciones de mindfulness y meditación."
-      },
-      {
-        "icon": "Activity",
-        "title": "Medtronic",
-        "description": "Líder global en tecnología de la salud, mejorando vidas."
-      },
-      {
-        "icon": "Zap",
-        "title": "Cliente Seis",
-        "description": "Soluciones innovadoras para un futuro sostenible."
-      }
-    ]
+  {
+    "icon": "ShieldCheck",
+    "title": "Avon",
+    "description": "Compañía global de cosméticos y productos de belleza, que comercializa mediante venta directa una amplia línea de cuidado personal y maquillaje."  
+  },
+  {
+    "icon": "Globe",
+    "title": "Acerbrag",
+    "description": "Fabricante argentino de productos de acero (barras, mallas, alambres) para la construcción, agro e industria, con servicios de corte y doblado."  
+  },
+  {
+    "icon": "Briefcase",
+    "title": "Molinos Río de la Plata",
+    "description": "Empresa argentina líder en alimentos, productora y exportadora de aceites, harinas, pastas y productos empaquetados para consumo masivo."  
+  },
+  {
+    "icon": "Heart",
+    "title": "Syngenta",
+    "description": "Compañía suiza de tecnología agrícola, especializada en protección de cultivos, semillas y soluciones digitales para una agricultura sostenible."  
+  },
+  {
+    "icon": "Activity",
+    "title": "L’Oreal",
+    "description": "La mayor firma mundial de cosmética y cuidado personal, que desarrolla y comercializa maquillaje, cuidado de la piel, fragancias y productos capilares."  
+  },
+  {
+    "icon": "Zap",
+    "title": "Logística Milo",
+    "description": "Empresa argentina con más de 100 años de trayectoria en logística integral: transporte, almacenamiento y servicios aduaneros con tecnología avanzada."  
+  }
+]
+
   },
   "contact": {
     "title": "Contacto, Nosotros",
